@@ -9,9 +9,9 @@ The system continuously monitors motor behavior using multiple sensors and ident
 
 Initial attempts focused on building a machine learning model using collected datasets under three operating conditions:
 
-•Normal
-•Moving
-•Blocked
+Normal
+Moving
+Blocked
 
 While this approach worked in controlled conditions, it failed during repeated real-world testing. The primary issue observed was sensor drift, especially in current readings. The same motor produced different values across sessions due to variations in battery voltage, load conditions, and environmental factors.
 
@@ -34,25 +34,25 @@ Hardware Components
 
 The system is built using the following components:
 
-•ESP32 microcontroller
-•L298N motor driver
-•2WD robot chassis with DC motors
-•ACS712 current sensor
-•MPU6050 accelerometer (vibration detection)
-•DHT11 temperature sensor
-•Buck converter for voltage regulation
-•Li-Po battery power supply
-•Functional Layers
+ESP32 microcontroller
+L298N motor driver
+2WD robot chassis with DC motors
+ACS712 current sensor
+MPU6050 accelerometer (vibration detection)
+DHT11 temperature sensor
+Buck converter for voltage regulation
+Li-Po battery power supply
+Functional Layers
 
 The system can be logically divided into three layers:
 
-•Control Layer
+Control Layer
 Handles motor control using PWM signals from the ESP32.
 
-•Sensing Layer
+Sensing Layer
 Collects real-time data from current, vibration, and temperature sensors.
 
-•Processing Layer
+Processing Layer
 Performs filtering, baseline learning, anomaly detection, and decision-making.
 
 5. Development Process
