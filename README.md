@@ -1,5 +1,4 @@
 Predictive Maintenance Robot using ESP32 and Multi-Sensor Fault Detection
-
 1. Introduction
 
 This project presents a real-time predictive maintenance system implemented on a 2WD mobile robot using an ESP32 microcontroller. The objective is to detect motor faults reliably under real-world conditions without relying on static datasets or pre-trained machine learning models.
@@ -10,9 +9,9 @@ The system continuously monitors motor behavior using multiple sensors and ident
 
 Initial attempts focused on building a machine learning model using collected datasets under three operating conditions:
 
-Normal
-Moving
-Blocked
+•Normal
+•Moving
+•Blocked
 
 While this approach worked in controlled conditions, it failed during repeated real-world testing. The primary issue observed was sensor drift, especially in current readings. The same motor produced different values across sessions due to variations in battery voltage, load conditions, and environmental factors.
 
@@ -35,24 +34,27 @@ Hardware Components
 
 The system is built using the following components:
 
-ESP32 microcontroller
-L298N motor driver
-2WD robot chassis with DC motors
-ACS712 current sensor
-MPU6050 accelerometer (vibration detection)
-DHT11 temperature sensor
-Buck converter for voltage regulation
-Li-Po battery power supply
-Functional Layers
+•ESP32 microcontroller
+•L298N motor driver
+•2WD robot chassis with DC motors
+•ACS712 current sensor
+•MPU6050 accelerometer (vibration detection)
+•DHT11 temperature sensor
+•Buck converter for voltage regulation
+•Li-Po battery power supply
+•Functional Layers
 
 The system can be logically divided into three layers:
 
-Control Layer
+•Control Layer
 Handles motor control using PWM signals from the ESP32.
-Sensing Layer
+
+•Sensing Layer
 Collects real-time data from current, vibration, and temperature sensors.
-Processing Layer
+
+•Processing Layer
 Performs filtering, baseline learning, anomaly detection, and decision-making.
+
 5. Development Process
 Step 1: Basic Robot Implementation
 
@@ -127,7 +129,6 @@ This scoring system allows gradual classification of system health instead of bi
 To avoid false positives, the system uses a state machine with persistence logic.
 
 States:
-
 WARMUP
 NORMAL
 WARNING
@@ -162,7 +163,7 @@ Fault scoring
 State transition
 Motor control action
 
-This loop executes approximately every 200 milliseconds .
+This loop executes approximately every 200 milliseconds.
 
 12. Key Observations
 Sensor values are not stable across sessions
@@ -185,9 +186,13 @@ No cloud-based monitoring or logging
 The current system provides a strong foundation for real-time fault detection. However, several practical enhancements can further improve reliability and usability:
 
 Battery Monitoring Integration
+
 Add an additional current sensing mechanism to monitor overall battery consumption. This can be used to estimate remaining charge and trigger alerts or actions when the battery level drops below a safe threshold, ensuring timely recharging and preventing unexpected shutdowns.
+
 Buzzer-Based Alert System
+
 Integrate a buzzer to provide immediate audible feedback during critical fault conditions. This ensures that severe issues are noticeable even without monitoring the dashboard, improving safety and response time.
+
 16. Conclusion
 
 This project demonstrates a shift from a traditional machine learning approach to a more practical, adaptive system suitable for embedded environments.
