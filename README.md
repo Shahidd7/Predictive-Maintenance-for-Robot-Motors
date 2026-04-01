@@ -200,60 +200,20 @@ Integrate a buzzer to provide immediate audible feedback during critical fault c
 
 16.SYSTEM ARCHITECTURE DIAGRAM
 ______________________________
-                    ┌──────────────────────────────┐
-                    │          Li-Po Battery       │
-                    └──────────────┬───────────────┘
-                                   │
-                          ┌────────▼────────┐
-                          │ Buck Converter  │
-                          └────────┬────────┘
-                                   │
-                          ┌────────▼────────┐
-                          │     ESP32       │
-                          │(Main Controller)│
-                          └───────┬─────────┘
-                                  │
-        ┌───────────────┬──────────┼──────────┬
-        │               │          │          │               
-        ▼               ▼          ▼          ▼               
- ┌────────────┐  ┌────────────┐  ┌──────────┐  ┌────────────┐
- │  ACS712    │  │ MPU6050    │  │  DHT11   │  │   L298N    │
- │ Current    │  │ Vibration  │  │ Temp     │  │Motor Driver│
- └────┬───────┘  └────┬───────┘  └────┬─────┘  └────┬───────┘
-      │               │               │             │
-      └──────────────┬┴───────────────┴─────────────┘
-                     │
-              ┌──────▼───────┐
-              │   DC Motors  │
-              │ (Left/Right) │
-              └──────────────┘
 
+![System Architecture](images/mermaid-diagram.png)
 
 17.SYSTEM FLOWCHART
 ___________________
 
-System Start
-     ↓
-Startup Health Check
-     ↓
-Warmup Phase (Baseline Collection)
-     ↓
-Normal Operation Loop:
-    - Read Sensors
-    - Apply Filters
-    - Compute Z-Scores
-    - Calculate Fault Score
-    - Update State Machine
-     ↓
-State Decision:
-    NORMAL / WARNING / FAULT / CRITICAL
-     ↓
-Motor Control Action
-     ↓
-Repeat (~200ms loop)
+![System Architecture](images/flowchart.png)
 
+18.CONNECTION DIAGRAM
+_____________________
 
-18. Conclusion
+![System Architecture](images/connection_diagram.jpg)
+
+19. Conclusion
 
 This project demonstrates a shift from a traditional machine learning approach to a more practical, adaptive system suitable for embedded environments.
 
