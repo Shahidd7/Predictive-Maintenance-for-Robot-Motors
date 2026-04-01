@@ -1,4 +1,5 @@
 Predictive Maintenance Robot using ESP32 and Multi-Sensor Fault Detection
+
 1. Introduction
 
 This project presents a real-time predictive maintenance system implemented on a 2WD mobile robot using an ESP32 microcontroller. The objective is to detect motor faults reliably under real-world conditions without relying on static datasets or pre-trained machine learning models.
@@ -101,8 +102,7 @@ This value represents how far a reading deviates from normal behavior.
 
 Small values indicate normal operation
 Large deviations indicate potential faults
-Positive and negative values are both meaningful for current analysis.
-
+Positive and negative values are both meaningful for current analysis
 7. Noise Reduction Techniques
 
 Raw sensor data contains noise that can lead to false detections. Two filtering techniques are used:
@@ -171,49 +171,51 @@ Sensor values are not stable across sessions
 Fixed thresholds are ineffective
 Prebuilt datasets have limited real-world applicability
 Adaptive systems provide significantly better reliability
-
-14. Advantages of the Approach
+13. Advantages of the Approach
 No dependency on machine learning models
 Fully real-time and hardware-adaptive
 Robust against noise and transient spikes
 Computationally efficient (runs entirely on ESP32)
 Scalable to additional sensors
-
-15. Limitations
+14. Limitations
 Baseline accuracy depends on correct warmup conditions
 DHT11 has limited precision and slow response
 Long-term degradation tracking is not implemented
-No cloud-based monitoring or logging.
-
-16. Future Improvements
+No cloud-based monitoring or logging
+15. Future Improvements
 
 The current system provides a strong foundation for real-time fault detection. However, several practical enhancements can further improve reliability and usability:
 
-•Battery Monitoring Integration
+Battery Monitoring Integration
 
 Add an additional current sensing mechanism to monitor overall battery consumption. This can be used to estimate remaining charge and trigger alerts or actions when the battery level drops below a safe threshold, ensuring timely recharging and preventing unexpected shutdowns.
 
-•Buzzer-Based Alert System
+Buzzer-Based Alert System
 
 Integrate a buzzer to provide immediate audible feedback during critical fault conditions. This ensures that severe issues are noticeable even without monitoring the dashboard, improving safety and response time.
 
+16. Conclusion
 
-16.SYSTEM ARCHITECTURE DIAGRAM
+This project demonstrates a shift from a traditional machine learning approach to a more practical, adaptive system suitable for embedded environments.
+
+By allowing the system to define its own baseline and detect deviations in real time, the solution becomes more robust, scalable, and aligned with real-world predictive maintenance principles.
+
+17.SYSTEM ARCHITECTURE DIAGRAM
 ______________________________
 
 ![System Architecture](images/mermaid-diagram.png)
 
-17.SYSTEM FLOWCHART
+18.SYSTEM FLOWCHART
 ___________________
 
 ![System Architecture](images/flowchart.png)
 
-18.CONNECTION DIAGRAM
+19.CONNECTION DIAGRAM
 _____________________
 
 ![System Architecture](images/connection_diagram.jpg)
 
-19. Conclusion
+20. Conclusion
 
 This project demonstrates a shift from a traditional machine learning approach to a more practical, adaptive system suitable for embedded environments.
 
