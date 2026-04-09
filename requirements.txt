@@ -1,0 +1,60 @@
+# ============================================================
+# Predictive Maintenance for Robot Motors
+# requirements.txt
+# ============================================================
+#
+# NOTE: This project is written in C++ for the ESP32
+# microcontroller using the Arduino framework.
+# It does NOT use Python, so there are NO pip packages to
+# install via "pip install -r requirements.txt".
+#
+# The dependencies for this project are Arduino libraries.
+# They are listed below for reference and are automatically
+# installed by running the provided setup.sh script.
+#
+# ============================================================
+# REQUIRED ARDUINO LIBRARIES (managed via Arduino CLI)
+# ============================================================
+#
+# 1. ESP32 Board Support Package
+#    Source : Espressif Systems
+#    Version: 2.x or later
+#    URL    : https://raw.githubusercontent.com/espressif/
+#             arduino-esp32/gh-pages/package_esp32_index.json
+#
+# 2. Adafruit MPU6050
+#    Version: 2.2.x or later
+#    Purpose: MPU6050 accelerometer/gyroscope (vibration)
+#
+# 3. Adafruit Unified Sensor
+#    Version: 1.1.x or later
+#    Purpose: Dependency for MPU6050 and DHT libraries
+#
+# 4. DHT sensor library (Adafruit)
+#    Version: 1.4.x or later
+#    Purpose: DHT11 temperature and humidity sensor
+#
+# 5. Adafruit BusIO
+#    Version: 1.x or later
+#    Purpose: I2C/SPI communication dependency
+#
+# 6. WiFi           (built-in with ESP32 board package)
+# 7. WebServer      (built-in with ESP32 board package)
+# 8. Wire           (built-in with Arduino/ESP32 core)
+#
+# ============================================================
+# HOW TO SET UP
+# ============================================================
+#
+# Option A — Windows (Easiest):
+#   Double-click setup.bat, or run in Command Prompt:
+#       setup.bat
+#
+# Option B — Linux / macOS:
+#   Run the shell script in a terminal:
+#       bash setup.sh
+#
+# Option C — Manual:
+#   Follow the step-by-step instructions in SETUP.md
+#
+# ============================================================
