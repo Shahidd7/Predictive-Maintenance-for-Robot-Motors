@@ -226,7 +226,7 @@ Sensor Data Acquisition
 
 > ⚠️ **Do all wiring with the battery disconnected. Double-check every connection before powering on.**
 
-Refer to the [Connection Diagram](connection_diagram1.png) for the full visual reference.
+Refer to the [Connection Diagram](connection_diagram.png) for the full visual reference.
 
 #### ESP32 → L298N Motor Driver
 
